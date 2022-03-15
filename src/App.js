@@ -5,7 +5,7 @@ import axios from "axios"
 function App() {
   const [data, setData] = useState([])
   useEffect(()=>{
-    axios.get("http://nodewebscrapper.herokuapp.com/news")
+    axios.get("https://nodewebscrapper.herokuapp.com/news")
     .then(result=>{
       setData(result.data)
     })
