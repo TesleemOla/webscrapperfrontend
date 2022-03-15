@@ -1,0 +1,31 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
+}
+.card{
+  border: 3px solid salmon;
+  margin: 1em auto;
+  width: 30vw;
+  padding: 0.8em;
+}
+@media screen and (max-width: 500px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+    margin: 0.4em;
+    }
+  .card{
+  border: 1px solid salmon;
+  margin: 0.3em auto;
+  width: 80vw;
+  height: 50vh;
+  padding: 1em
+}
+}
