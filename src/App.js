@@ -20,7 +20,7 @@ function App() {
             <h2>{title}</h2>
             <h2>
               <a href={url} target="_blank" rel="noopenner noreferrer">
-                Read more
+                <button>Read more</button>
               </a>
               </h2>
           </div>
