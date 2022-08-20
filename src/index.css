@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.App{
+.News{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   
@@ -33,7 +33,7 @@ a button{
   border-radius: 9px;
 }
 @media screen and (max-width: 650px) {
-  .App{
+  .News{
     grid-template-columns: repeat(2, 1fr);
   }
   .card img{
