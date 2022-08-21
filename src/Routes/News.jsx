@@ -10,8 +10,9 @@ const News=()=>{
       });
     }, []);
     return (
-      <div className="News">
+      <div>
         <Nav/>
+        <div  className="News">
         {data.map(({ title, url, source, id }) => {
           return (
             <div key={id} className="card">
@@ -31,6 +32,7 @@ const News=()=>{
             </div>
           );
         })}
+      </div>
       </div>
     );
 }
