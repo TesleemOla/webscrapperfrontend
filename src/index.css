@@ -3,8 +3,29 @@
   margin: 0;
   box-sizing: border-box;
 }
+nav{
+  background: salmon;
+  color: cyan;
+  padding: 1em 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a:visited {
+  color: cyan;
+}
+nav ul{
+  margin: 0.5em;
+}
+nav ul li{
+  list-style-type: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1em;
+}
 
-.App{
+
+.News{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   
@@ -33,7 +54,7 @@ a button{
   border-radius: 9px;
 }
 @media screen and (max-width: 650px) {
-  .App{
+  .News{
     grid-template-columns: repeat(2, 1fr);
   }
   .card img{
