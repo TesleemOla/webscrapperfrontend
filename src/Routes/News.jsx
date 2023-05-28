@@ -1,13 +1,15 @@
 import React, { useState, useEffect} from "react";
-import axios from "axios";
+
 import Nav from "../Components/Nav"
 
 const News=()=>{
     const [data, setData] = useState([]);
     useEffect(() => {
-      axios.get("https://nodewebscrapper.herokuapp.com/news").then((result) => {
-        setData(result.data);
-      });
+      fetch(`https://webscrapper-tfmb.onrender.com/news`)
+      .then(res=> res.json())
+      .then(res=> setData(res))
+      .catch(err=> console.error(err))
+      
     }, []);
     return (
       <div>
@@ -20,9 +22,11 @@ const News=()=>{
                 <img src="./images/bbc.png" alt="BBC" />
               ) : source === "Guardian" ? (
                 <img src="./images/guardian.png" alt="guardian" />
-              ) : (
-                <img src="./images/reuters.png" alt="reuters" />
-              )}
+              ) : source === "Reuters" ? (
+                <img src="./images/reuters.png" alt="reuters" />)
+                : <img src="https://goodlogo.com/images/logos/cnn_logo_2449.gif"
+                alt="cnn"/>
+              }
               <h2>{title}</h2>
               <h2>
                 <a href={url} target="_blank" rel="noopenner noreferrer">
