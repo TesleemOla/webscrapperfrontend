@@ -13,7 +13,6 @@ const News=()=>{
     }, []);
     return (
       <div>
-        <Nav/>
         <div  className="News">
         {data.map(({ title, url, source, id }) => {
           return (
